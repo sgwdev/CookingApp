@@ -46,6 +46,24 @@
     <%= form.text_area :comment %>
   </div>
 
+  <br />
+
+  <div id="ingredientList" class="dynamic-list">
+    <div class="dynamic-list-header">
+      <%= label "Ingredients", "Ingredients : " %>
+    </div>
+    <div class="dynamic-list-buttons">
+      <%= button_to_add_fields "Add", form, :ingredientsRecipes %>
+    </div>
+    <div class="dynamic-list-content">
+      <%= form.fields_for :ingredientsRecipes do |builder| %>
+        <%= render 'ingredientsRecipe_fields', :f => builder %>
+      <% end %>
+    </div>
+  </div>
+
+  <br />
+
   <div class="actions">
     <%= form.submit %>
   </div>

@@ -35,5 +35,12 @@
   <%= @recipe.comment %>
 </p>
 
+<p>
+  <strong>Ingredients: </strong><br />
+  <% @recipe.ingredientsRecipes.each do |portion| %>
+  - <%= "#{portion.ingredient.name} : #{ portion.amount.to_s + portion.unit.symbol}" %><br/>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
 <%= link_to 'Back', recipes_path %>
