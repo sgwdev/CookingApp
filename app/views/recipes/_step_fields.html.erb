@@ -1,0 +1,7 @@
+<div class="dynamic-list-element step">
+  <%# f.hidden_field :number, value: 1 %>
+  <span>:</span>
+  <%# f.label :description, "Description : " %>
+  <%= f.text_area :description %>
+  <%= f.hidden_field :_destroy if @recipe.persisted? %>
+</div>

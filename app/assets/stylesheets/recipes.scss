@@ -10,24 +10,55 @@
       "title buttons"
       "form form";
     width: 550px;
-    border: 1px solid crimson;
+    border: 1px solid #f0f0f0;
     align-items: center;
 }
 
 .dynamic-list-header {
   grid-area: title;
   justify-self: start;
+  margin-left: 10px;
 }
 
 .dynamic-list-buttons {
   grid-area: buttons;
   justify-self: end;
+  margin-right: 10px;
 }
 
 .dynamic-list-content {
   grid-area: form;
+  margin: 0 10px 10px 10px;
+}
+
+body {
+  counter-reset: ingredientNumber;
+  counter-reset: stepNumber;
+}
+
+.ingredient {
+  counter-increment: ingredientNumber;
+}
+
+.ingredient span::before {
+  content: counter(ingredientNumber);
+}
+
+.step {
+  counter-increment: stepNumber;
+}
+
+.step span::before {
+  content: counter(stepNumber);
+}
+
+.step textarea {
+  width: 95%;
 }
 
 .ingredient label {
   display: inline;
 }
+
+
+

@@ -50,7 +50,7 @@
 
   <div id="ingredientList" class="dynamic-list">
     <div class="dynamic-list-header">
-      <%= label "Ingredients", "Ingredients : " %>
+      <%= label "ingredients", "Ingredients : " %>
     </div>
     <div class="dynamic-list-buttons">
       <%= button_to_add_fields "Add", form, :ingredientsRecipes %>
@@ -63,6 +63,20 @@
   </div>
 
   <br />
+
+  <div id="stepList" class="dynamic-list">
+    <div class="dynamic-list-header">
+      <%= label "steps", "Steps : " %>
+    </div>
+    <div class="dynamic-list-buttons">
+      <%= button_to_add_fields "Add", form, :steps %>
+    </div>
+    <div class="dynamic-list-content">
+      <%= form.fields_for :steps do |builder| %>
+        <%= render 'step_fields', :f => builder %>
+      <% end %>
+    </div>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
