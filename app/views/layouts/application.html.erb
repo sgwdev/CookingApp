@@ -8,8 +8,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="top-bar">
+    </div>
+    <div class="header-container">
+      <header>
+        <div class="logo">Cooking App</div>
+      </header>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li class="active"><%= link_to 'Home', recipes_path %></a></li>
+          <li><%= link_to 'Recipes', recipes_path %></li>
+          <li><%= link_to 'Ingredients', ingredients_path %></a></li>
+          <li><%= link_to 'Units', units_path %></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="subnav-container">
+    </div>
+    <main>
+      <div class="content">
+        <%= yield %>
+      </div>
+    </main>
   </body>
+  <footer></footer> 
 </html>

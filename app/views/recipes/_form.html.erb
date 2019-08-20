@@ -11,46 +11,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="recipe-header">
+    <div class="recipe-photo">
+        <%# image_tag "default-recipe-2.jpg", alt: "Recipe picture" %>
+    </div>
+    <div class="recipe-info">
+      <div class="field">
+        <%= form.label :title, "Title:" %>
+        <%= form.text_field :title %>
+      </div>
+      
+      <div class="recipe-time">
+        <div class="field total-time">
+          <%= form.label :total_time, "Total time:" %>
+          <%= form.number_field :total_time %> mins
+        </div>
+        
+        <div class="field preparation-time">
+          <%= form.label :preparation_time, "Preparation:" %>
+          <%= form.number_field :preparation_time %> mins
+        </div>
 
-  <div class="field">
-    <%= form.label :total_time %>
-    <%= form.number_field :total_time %>
-  </div>
+        <div class="field cooking-time">
+          <%= form.label :cooking_time, "Cooking:" %>
+          <%= form.number_field :cooking_time %> mins
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :preparation_time %>
-    <%= form.number_field :preparation_time %>
+      <div class="field">
+        <%= form.label :serving, "Serving:" %>
+        <%= form.number_field :serving %> persons
+      </div>
+    </div>
+    <div class="recipe-description">
+      <div class="field">
+        <%= form.label :description, "Description:" %>
+        <%= form.text_area :description, :rows => 5 %>
+      </div>
+    </div>
+    <!--
+      <div class="field">
+        <%# form.label :comment %>
+        <%# form.text_area :comment %>
+      </div>
+    -->
   </div>
-
-  <div class="field">
-    <%= form.label :cooking_time %>
-    <%= form.number_field :cooking_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :serving %>
-    <%= form.number_field :serving %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment %>
-  </div>
-
+  
   <br />
 
   <div id="ingredientList" class="dynamic-list">
     <div class="dynamic-list-header">
-      <%= label "ingredients", "Ingredients : " %>
+      <%= label "ingredients", "Ingredients: " %>
     </div>
     <div class="dynamic-list-buttons">
       <%= button_to_add_fields "Add", form, :ingredientsRecipes %>
@@ -62,11 +73,9 @@
     </div>
   </div>
 
-  <br />
-
   <div id="stepList" class="dynamic-list">
     <div class="dynamic-list-header">
-      <%= label "steps", "Steps : " %>
+      <%= label "steps", "Steps: " %>
     </div>
     <div class="dynamic-list-buttons">
       <%= button_to_add_fields "Add", form, :steps %>
@@ -79,6 +88,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "action-btn" %>
+    <%= link_to "Back", recipes_path, class: "soft-btn" %>
   </div>
 <% end %>

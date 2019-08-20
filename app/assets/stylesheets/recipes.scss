@@ -9,9 +9,9 @@
     grid-template-areas: 
       "title buttons"
       "form form";
-    width: 550px;
-    border: 1px solid #f0f0f0;
     align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
 }
 
 .dynamic-list-header {
@@ -53,12 +53,93 @@ body {
 }
 
 .step textarea {
-  width: 95%;
+  width: 100%;
 }
 
 .ingredient label {
   display: inline;
 }
 
+input[type=number] {
+  width: 50px;
+}
 
+.recipe-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "photo info"
+    "description description";
+  padding: 10px;
+  box-sizing: border-box;
+
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+}
+
+.recipe-header input[type=text] {
+  width: 100%;
+}
+
+.recipe-photo {
+  grid-area: photo;
+  border: 1px solid #f0f0f0; /*#f0f0f0*/
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0.5), rgba(240, 240, 240, 0.5)), url(asset-path('default-recipe.jpg'));
+}
+
+/*
+.img-upload.recipe-photo:hover {
+  background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0.8), rgba(240, 240, 240, 0.8)), url(asset-path('default-recipe.jpg'));
+}
+*/
+
+.recipe-info {
+  grid-area: info;
+  //border: 1px solid red;
+}
+
+.recipe-description {
+  grid-area: description;
+  //border: 1px solid purple;
+  
+}
+
+.recipe-description textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.recipe-time {
+  display: grid;
+  grid-template-areas: 
+    "total total"
+    "preparation cooking";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, var(--primary-color) 49%, var(--dark-primary-color) 5%, var(--light-primary-color) 50%);
+  border-radius: 5px;
+}
+
+.recipe-time label {
+  display: inline;
+}
+
+.total-time {
+  grid-area: total;
+}
+
+.preparation-time {
+  grid-area: preparation;
+}
+
+.cooking-time {
+  grid-area: cooking;
+}
 

@@ -6,7 +6,7 @@ module ApplicationHelper
           render(association.to_s.singularize + "_fields", f: builder)
         end
                 
-        button_tag("Add", id: id, onclick: "addField(event)",  data: { fields: fields.gsub("\n", "") }) +
-        button_tag("Remove", onclick: "removeField(event)")
+        button_tag("Add", id: id, onclick: "addField(event)",  data: { fields: fields.gsub("\n", "") }, class: "action-btn add-btn") +
+        button_tag("Remove", onclick: "removeField(event)", class: "action-btn")
       end
 end

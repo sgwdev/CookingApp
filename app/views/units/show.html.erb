@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @unit.name %>
-</p>
+<h1>Unit</h1>
 
-<p>
-  <strong>Symbol:</strong>
-  <%= @unit.symbol %>
-</p>
+<div class="unit-header well">
+  <div class="field">
+    <strong>Name:</strong>
+    <%= @unit.name %>
+  </div>
 
-<%= link_to 'Edit', edit_unit_path(@unit) %> |
-<%= link_to 'Back', units_path %>
+  <div class="field">
+    <strong>Symbol:</strong>
+    <%= @unit.symbol %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_unit_path(@unit), class: "action-btn" %>
+<%= link_to 'Back', units_path, class: "soft-btn" %>

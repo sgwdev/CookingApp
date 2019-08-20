@@ -16,9 +16,9 @@
       <tr>
         <td><%= unit.name %></td>
         <td><%= unit.symbol %></td>
-        <td><%= link_to 'Show', unit %></td>
-        <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
-        <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', unit, class: "soft-btn" %></td>
+        <td><%= link_to 'Edit', edit_unit_path(unit), class: "action-btn" %></td>
+        <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' }, class: "danger-btn" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Unit', new_unit_path %>
+<%= link_to 'New Unit', new_unit_path, class: "action-btn" %>

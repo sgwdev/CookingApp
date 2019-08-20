@@ -11,12 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="ingredient-header well">
+    <div class="field">
+      <strong><%= form.label :name, "Name:" %></strong>
+      <%= form.text_field :name %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "action-btn" %>
+    <%= link_to "Back", ingredients_path, class: "soft-btn" %>
   </div>
 <% end %>
