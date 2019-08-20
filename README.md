@@ -1,24 +1,35 @@
-# README
+# CookingApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A personal project to store all our favorite recipes in the same place using Ruby on Rails version 5.2.3.
+Even though this project started for practical purposes, it is also meant for learning and practicing Ruby on Rails purpose.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+- Ruby
+- Rails (`gem install rails` to install)
+- Sqlite3 (`gem install sqlite3` to install)
 
-* Database creation
+### Database creation
 
-* Database initialization
+To create the database schema you need to execute the following command in console:
+`rails db:migrate`
 
-* How to run the test suite
+### Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+To fill database with prepared sample data you can execute the following command in console: 
+`rails db:seed`
 
-* Deployment instructions
+### Project Status
 
-* ...
+CookingApp website can now manage units, ingredients and recipes
+
+#### Upcoming features
+
+- Design improvment
+- Recipe picture upload
+- User management
+- French and Japanese languages support
