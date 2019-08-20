@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ingredients = Ingredient.create([{ name: 'Chocolate'}, { name: 'Sugar'}, { name: 'Salt'}, { name: 'Milk'}, { name: 'Flour'}, { name: 'Egg' }, { name: 'Cinnamon'}, { name: 'Butter'}])
+unites = Unit.create([{ name: 'Gram', symbol: 'g' }, { name: 'Milliliter', symbol: 'ml' }])
