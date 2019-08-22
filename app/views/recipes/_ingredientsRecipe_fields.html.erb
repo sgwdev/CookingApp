@@ -2,10 +2,10 @@
 <div class="dynamic-list-element ingredient">
     <span>:</span>
     <%# f.label :name, "Ingredient : " %>
-    <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, {:prompt => true} %>
+    <%= f.collection_select :ingredient_id, Ingredient.order(:name), :id, :name, {:prompt => true} %>
     <%= f.label :amount, "Amount :" %>
     <%= f.number_field :amount %>
-    <%= f.collection_select :unit_id, Unit.all, :id, :symbol, {:prompt => true} %>
+    <%= f.collection_select :unit_id, Unit.order(:name), :id, :symbol, {:prompt => true} %>
     <%= f.hidden_field :_destroy if @recipe.persisted? %>
 </div>
 
